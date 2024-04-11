@@ -2,6 +2,7 @@ from sklearn.cluster import DBSCAN
 from sklearn.manifold import TSNE
 from umap import UMAP
 
+
 class Cluster:
 
     def __init__(

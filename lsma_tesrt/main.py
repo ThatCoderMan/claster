@@ -8,8 +8,8 @@ from plot import Plot
 
 data = list(chain(*results))
 # data = results
-# enb = Embedding(data).create_embeddings()
-enb = Embedding(data).load()
+enb = Embedding(data).create_embeddings()
+# enb = Embedding(data).load()
 clustering = Cluster(enb, eps=0.075, min_samples=15)
 projection = clustering.create_projection()
 cluster = clustering.create_clusters(projection)
