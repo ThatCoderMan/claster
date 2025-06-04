@@ -23,7 +23,9 @@ class Product(Base):
         return hash(self.id)
 
     def __eq__(self, other):
-        return self.id == self.id
+        if isinstance(other, Product):
+            return self.id == other.id
+        return False
 
 
 query = session.query(Product.description)
